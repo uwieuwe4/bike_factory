@@ -1,0 +1,63 @@
+﻿<Window
+        x:Class="bike_factory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bike_factory"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"       
+        mc:Ignorable="d"
+        Background="#FFF2B0" 
+        Width="800"
+        Height="500"
+        ResizeMode="CanResize">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#1A1733"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Faune Text"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="gridEingabe" Visibility="Visible" Grid.Column="1" Background="#32e2f2" >
+           
+        </Grid>
+        <Grid x:Name="gridKapazitätsplan" Grid.Column="1" Visibility="Hidden" Background="#2ac5d3" >
+        </Grid>
+        <Grid x:Name="gridEigenfertigung" Visibility="Hidden" Background="#24abb7" Grid.Column="1" >
+        </Grid>
+        <Grid x:Name="gridBestellungen" Visibility="Hidden" Background="#1c7982" Grid.Column="1" >
+        </Grid>
+
+        <Border BorderBrush="Black" CornerRadius="0,8,8,0" BorderThickness="0,2,2,2" >
+            <StackPanel Background="Black">
+
+                <DockPanel x:Name="dpEingabe" Margin="10,0,0,3" VerticalAlignment="Center" MouseDown="dpEingabe_MouseDown">
+                    <Label x:Name="menuItemEingabe" Content="EINGABE" Foreground="White" VerticalAlignment="Center" FontSize="16"/>
+                    <Image Source="/Icons/eingabe.png" HorizontalAlignment="Right" Width="35" Height="45"/>
+                </DockPanel>
+                <DockPanel x:Name="dpKapazitätplanung" Margin="10,0,0,3" VerticalAlignment="Center" MouseDown="dpKapazitätsplanung_MouseDown" >
+                    <Label x:Name="menuItemKapazitätsplanung" Content="KAPA-PLANUNG" Foreground="White" FontSize="16" VerticalAlignment="Center" />
+                    <Image Source="/Icons/kapa.png" HorizontalAlignment="Right" Width="35" Height="35"/>
+                </DockPanel>
+                <DockPanel x:Name="dpEigenfertigung" VerticalAlignment="Center" Margin="10,0,0,3" MouseDown="dpEigenfertigung_MouseDown" >
+                    <Label x:Name="menuItemEigenfertigung" Content="EIGENFERTIGUNG" Foreground="White" FontSize="16" VerticalAlignment="Center"/>
+                    <Image Source="/Icons/eigen.png" HorizontalAlignment="Right" Width="35" Height="35"/>
+                </DockPanel>
+                <DockPanel x:Name="dpBestellungen" VerticalAlignment="Center" Margin="10,0,0,3" MouseDown="dpBestellungen_MouseDown" >
+                    <Label x:Name="menuItemBestellungen" Content="BESTELLUNGEN" Foreground="White" FontSize="16" VerticalAlignment="Center"/>
+                    <Image Source="/Icons/order.png" HorizontalAlignment="Right" Width="35" Height="35"/>
+                </DockPanel>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
