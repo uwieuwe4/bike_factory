@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace bike_factory
 {
@@ -25,6 +27,26 @@ namespace bike_factory
             InitializeComponent();
         }
 
+
+
+
+
+        //CODE FÜR EINGABE
+        //Input-File wird ausgewählt
+        private void btnOpenInputFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog inputFileDialog = new OpenFileDialog();
+            if (inputFileDialog.ShowDialog() == true)
+               lblInputFileName.Content = inputFileDialog.FileName;
+        }
+        //CODE FÜR KAPA-PLANUNG
+
+        //CODE FÜR BESTELLUNGEN
+
+        //CODE FÜR EIGENFERTIGUNG
+
+        //CODE FÜR DAS MENÜ
+        //Wenn man auf einenn Menüpunkt Klickt, wird es sichtbar
         private void dpEingabe_MouseDown(object sender, MouseButtonEventArgs e)
         {
             gridEingabe.Visibility = Visibility.Visible;
@@ -56,5 +78,6 @@ namespace bike_factory
             gridEigenfertigung.Visibility = Visibility.Hidden;
             gridBestellungen.Visibility = Visibility.Visible;
         }
+
     }
 }

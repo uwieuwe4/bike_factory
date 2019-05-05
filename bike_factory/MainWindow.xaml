@@ -16,9 +16,15 @@
         <Style TargetType="Button">
             <Setter Property="Background" Value="#1A1733"/>
             <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="60"/>
         </Style>
         <Style TargetType="Label">
-            <Setter Property="FontFamily" Value="Faune Text"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -28,9 +34,13 @@
         </Grid.ColumnDefinitions>
 
         <Grid x:Name="gridEingabe" Visibility="Visible" Grid.Column="1" Background="#32e2f2" >
-           
+            <Label>EINGABE</Label>
+            <StackPanel Margin="0,90,0,0">
+                <Button x:Name="btnOpenInputFile" Click="btnOpenInputFile_Click" Content="INPUT-DATEI WÄHLEN" />
+                <Label x:Name="lblInputFileName" Content="Noch keine Datei ausgewählt..." FontSize="10"/>
+            </StackPanel>
         </Grid>
-        <Grid x:Name="gridKapazitätsplan" Grid.Column="1" Visibility="Hidden" Background="#2ac5d3" >
+        <Grid x:Name="gridKapazitätsplan" Visibility="Hidden" Grid.Column="1" Background="#2ac5d3" >
         </Grid>
         <Grid x:Name="gridEigenfertigung" Visibility="Hidden" Background="#24abb7" Grid.Column="1" >
         </Grid>
