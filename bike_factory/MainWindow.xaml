@@ -41,10 +41,13 @@
             </StackPanel>
         </Grid>
         <Grid x:Name="gridKapazitätsplan" Visibility="Hidden" Grid.Column="1" Background="#2ac5d3" >
+            <Label>KAPAZITÄTSPLANUNG</Label>
         </Grid>
         <Grid x:Name="gridEigenfertigung" Visibility="Hidden" Background="#24abb7" Grid.Column="1" >
+            <Label>EIGENFERTIGUNG</Label>
         </Grid>
         <Grid x:Name="gridBestellungen" Visibility="Hidden" Background="#1c7982" Grid.Column="1" >
+            <Label>BESTELLUNGEN</Label>
         </Grid>
 
         <Border BorderBrush="Black" CornerRadius="0,8,8,0" BorderThickness="0,2,2,2" >
